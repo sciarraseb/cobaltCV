@@ -58,11 +58,19 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="cobaltresume">cobaltResume<a class="anchor" aria-label="anchor" href="#cobaltresume"></a>
+<div class="page-header"><h1 id="cobaltresume-">cobaltResume <img src="inst/rstudio/templates/project/cobalt_hex.png" align="right" width="200"><a class="anchor" aria-label="anchor" href="#cobaltresume-"></a>
 </h1></div>
-<p>The goal of <code>cobaltResume</code> is to create professionally-looking résumés and cover letters. Here is a résumé I created for myself <code>cobaltResume</code>: <a href="https://github.com/sebsciarra/cobaltResume/blob/main/man/resume_cover_letter.pdf" class="external-link">my resume</a>.</p>
+<p>The goal of <code>cobaltResume</code> is to create professionally-looking résumés and cover letters in RStudio. LaTeX code has been written in the <code>cobaltResume.cls</code>, <code>cobaltCoverLetter.cls</code>, <code>cobaltResume.tex</code>, and <code>cobaltCoverLetter.tex</code> files to format the résumé and cover letter files. I have written my own résumé and cover letter using <code>cobaltResume</code>, which can be viewed <a href="https://github.com/sebsciarra/cobaltResume/blob/main/man/resume_cover_letter.pdf" class="external-link">my resume</a>. Note that the cover letter is populated with placeholder content. In the sections that follow, I will explain the following four components to using <code>cobaltResume</code>:</p>
+<ol style="list-style-type: decimal">
+<li>Installation</li>
+<li>Project creation</li>
+<li>Creating a résumé</li>
+<li>Creating a cover letter</li>
+<li>Merging the résumé and cover letter into one PDF file</li>
+</ol>
+<p>The goal of <code>cobaltResume</code> is to create professionally-looking résumés and cover letters. Here is a résumé and cover letter I created for myself using <code>cobaltResume</code>:</p>
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+<h2 id="id_1-installation">1) Installation<a class="anchor" aria-label="anchor" href="#id_1-installation"></a>
 </h2>
 <p>You can install the development version of cobaltResume GitHub and load it into your session with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -71,11 +79,17 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sebsciarra/cobaltResume" class="external-link">cobaltResume</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="creating-a-résumé">Creating a résumé<a class="anchor" aria-label="anchor" href="#creating-a-r%C3%A9sum%C3%A9"></a>
+<h2 id="id_2-project-creation">2) Project creation<a class="anchor" aria-label="anchor" href="#id_2-project-creation"></a>
 </h2>
-<p>Résumés can be created by using cobaltResume template for résumés.</p>
-<p><img src="reference/figures/resume_template.png" width="50%" height="50%"></p>
-<p>In the resulting .Rmd file, a résumé can be completed by using three features. First, information related to identification and skills can be included in the résumé by filling in the appropriate YAML header variables shown below.</p>
+<p>To create a <code>cobaltResume</code> template, click on <strong>File</strong> &gt; <strong>New Project</strong> &gt; <strong>New Directory</strong>. Then select <strong>Résumé and cover letter project using cobaltResume</strong> from the dropdown menu as shown below.</p>
+<p><img src="reference/figures/resume_project.png" width="50%" height="50%"></p>
+<p>THen, give your project a name and specify where you’d like the files to appear. In the screenshot below, the project name is <code>my_resume_cover_letter</code> will appear as a new folder on the Desktop.</p>
+<p><img src="reference/figures/project_name.png" width="50%" height="50%"></p>
+</div>
+<div class="section level2">
+<h2 id="id_3-creating-a-résumé">3) Creating a résumé<a class="anchor" aria-label="anchor" href="#id_3-creating-a-r%C3%A9sum%C3%A9"></a>
+</h2>
+<p>In the <code>resume.Rmd</code> file, a résumé can be completed by using three features. First, information related to identification and skills can be included in the résumé by filling in the appropriate YAML header variables shown below.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">firstName</span><span class="kw">:</span><span class="at"> </span><span class="st">"firstName"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lastName</span><span class="kw">:</span><span class="at"> </span><span class="st">"lastName"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">position</span><span class="kw">:</span><span class="at"> </span><span class="st">"Position"</span><span class="co"> #job position being applied to </span></span>
@@ -94,7 +108,7 @@
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">#skills + citizenship</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">skills</span><span class="kw">:</span><span class="at"> </span><span class="st">"R, SQL, Python, LaTeX, Bash, HTML, JavaScript, CSS, Machine learning, Data science, Data visualization, Knowledge translation"</span><span class="co"> #skills relevant to the job</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">citizenship</span><span class="kw">:</span><span class="at"> </span><span class="st">"Citizenship status"</span><span class="co"> #e.g., work permit/study permit/Permanent resident/citizen, etc.</span></span></code></pre></div>
-<p>Second, sections can be created in the <code>.Rmd</code> file and accessorized with fontawesome icons (for a full list, see <a href="http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf" class="external-link">fontawesome icons</a>). For example, <code>\faSuitcase\ Employment</code> results in the header shown below.</p>
+<p>Second, sections can be created in the <code>resume.Rmd</code> file and accessorized with fontawesome icons (for a full list, see <a href="http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf" class="external-link">fontawesome icons</a>). For example, <code>\faSuitcase\ Employment</code> results in the header shown below.</p>
 <p><img src="reference/figures/example_header.png" width="25%" height="25%"></p>
 <p>Third, résumé entries can be completed using <code><a href="reference/create_resume_entry.html">create_resume_entry()</a></code>. Two examples are provided below.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -115,11 +129,9 @@
 <p><img src="reference/figures/hyperlink_footnote.png" width="65%" height="65%"></p>
 </div>
 <div class="section level2">
-<h2 id="creating-a-cover-letter">Creating a cover letter<a class="anchor" aria-label="anchor" href="#creating-a-cover-letter"></a>
+<h2 id="id_4-creating-a-cover-letter">4) Creating a cover letter<a class="anchor" aria-label="anchor" href="#id_4-creating-a-cover-letter"></a>
 </h2>
-<p>Cover letters can be created by using cobaltResume template for cover letters.</p>
-<p><img src="reference/figures/cover_letter.png" width="50%" height="50%"></p>
-<p>In the resulting .Rmd file, a résumé can be completed by using three features. First, information related to identification and skills can be included in the résumé by filling in the appropriate YAML header variables shown below.</p>
+<p>In the <code>cover_letter.Rmd</code> file, a résumé can be completed by using three features. First, information related to identification and skills can be included in the résumé by filling in the appropriate YAML header variables shown below.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">firstName</span><span class="kw">:</span><span class="at"> </span><span class="st">"firstName"</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lastName</span><span class="kw">:</span><span class="at"> </span><span class="st">"lastName"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">position</span><span class="kw">:</span><span class="at"> </span><span class="st">"Position"</span><span class="co"> #job position being applied to </span></span>
@@ -146,9 +158,9 @@
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="fu">citizenship</span><span class="kw">:</span><span class="at"> </span><span class="st">"Citizenship status"</span><span class="co"> #e.g., work permit/study permit/Permanent resident/citizen, etc.</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="merging-the-résumé-and-cover-letter-into-one-pdf">Merging the résumé and cover letter into one PDF<a class="anchor" aria-label="anchor" href="#merging-the-r%C3%A9sum%C3%A9-and-cover-letter-into-one-pdf"></a>
+<h2 id="id_5-merging-the-résumé-and-cover-letter-into-one-pdf">5) Merging the résumé and cover letter into one PDF<a class="anchor" aria-label="anchor" href="#id_5-merging-the-r%C3%A9sum%C3%A9-and-cover-letter-into-one-pdf"></a>
 </h2>
-<p>To merge the résumé and cover letter into one PDF, make sure that each file has been created from the appropriate template and created within an R project. Thus, there should be two folders: one for the résumé and one for the cover letter. Once the résumé and cover letter <code>.Rmd</code> files have been created, they can be merged by specifying the <code>knit</code> YAML variable in the résumé <code>.Rmd</code> file such that</p>
+<p>To merge the résumé and cover letter into one PDF, make sure that each <code>.Rmd</code> file exists in its own folder (as is the case when the project is first created). With the résumé and cover letter <code>.Rmd</code> files in their own folders, they can be merged by specifying the <code>knit</code> YAML variable in either the <code>résumé .Rmd</code> and/or the <code>cover_letter.Rmd</code> file(s) such that</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">knit</span><span class="kw">:</span><span class="at"> cobaltResume::merge_resume_cover_letter</span></span></code></pre></div>
 </div>
 </div>
