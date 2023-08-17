@@ -8,14 +8,14 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
-)
+) 
 ```
 
 # cobaltResume <img src="man/figures/LICENSE.png" align="right" width=200 />
 
 The goal of `cobaltResume` is to create professionally-looking resumes and cover letters in RStudio. LaTeX code has been written in the `cobaltResume.cls`, `cobaltCoverLetter.cls`, `cobaltResume.tex`, and `cobaltCoverLetter.tex` files to format the resume and cover letter files.  I have written my own resume and cover letter using `cobaltResume`, which can be viewed [my resume](https://github.com/sebsciarra/cobaltResume/blob/main/man/resume_cover_letter.pdf). Note that the cover letter is populated with placeholder content.  In the five sections that follow, I will explain the components to using `cobaltResume`: 
 
-1) Installation 
+1) Installation  
 2) Project creation
 3) Creating a resume
 4) Creating a cover letter

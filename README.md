@@ -12,7 +12,7 @@ Note that the cover letter is populated with placeholder content. In the
 five sections that follow, I will explain the components to using
 `cobaltResume`:
 
-1)  Installation
+1)  Installation  
 2)  Project creation
 3)  Creating a resume
 4)  Creating a cover letter
