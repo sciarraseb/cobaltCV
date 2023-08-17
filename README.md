@@ -1,26 +1,22 @@
 
-# cobaltResume <img src="inst/rstudio/templates/project/cobalt_hex.png" align="right" width=200 />
+# cobaltResume <img src="man/figures/LICENSE.png" align="right" width=200 />
 
-The goal of `cobaltResume` is to create professionally-looking résumés
+The goal of `cobaltResume` is to create professionally-looking resumes
 and cover letters in RStudio. LaTeX code has been written in the
 `cobaltResume.cls`, `cobaltCoverLetter.cls`, `cobaltResume.tex`, and
-`cobaltCoverLetter.tex` files to format the résumé and cover letter
-files. I have written my own résumé and cover letter using
+`cobaltCoverLetter.tex` files to format the resume and cover letter
+files. I have written my own resume and cover letter using
 `cobaltResume`, which can be viewed [my
 resume](https://github.com/sebsciarra/cobaltResume/blob/main/man/resume_cover_letter.pdf).
 Note that the cover letter is populated with placeholder content. In the
-sections that follow, I will explain the following four components to
-using `cobaltResume`:
+five sections that follow, I will explain the components to using
+`cobaltResume`:
 
 1)  Installation
 2)  Project creation
-3)  Creating a résumé
+3)  Creating a resume
 4)  Creating a cover letter
-5)  Merging the résumé and cover letter into one PDF file
-
-The goal of `cobaltResume` is to create professionally-looking résumés
-and cover letters. Here is a résumé and cover letter I created for
-myself using `cobaltResume`:
+5)  Merging the resume and cover letter into one PDF file
 
 ## 1) Installation
 
@@ -47,11 +43,11 @@ appear. In the screenshot below, the project name is
 
 <img src="man/figures/project_name.png" width="50%" height="50%" />
 
-## 3) Creating a résumé
+## 3) Creating a resume
 
-In the `resume.Rmd` file, a résumé can be completed by using three
+In the `resume.Rmd` file, a resume can be completed by using three
 features. First, information related to identification and skills can be
-included in the résumé by filling in the appropriate YAML header
+included in the resume by filling in the appropriate YAML header
 variables shown below.
 
 ``` yaml
@@ -113,9 +109,9 @@ repository. This not shows up as a footnote, as shown below.
 
 ## 4) Creating a cover letter
 
-In the `cover_letter.Rmd` file, a résumé can be completed by using three
-features. First, information related to identification and skills can be
-included in the résumé by filling in the appropriate YAML header
+In the `cover_letter.Rmd` file, a cover letter can be completed by using
+three features. First, information related to identification and skills
+can be included in the résumé by filling in the appropriate YAML header
 variables shown below.
 
 ``` yaml
@@ -145,13 +141,13 @@ emailClosing: "Sincerely"
 citizenship: "Citizenship status" #e.g., work permit/study permit/Permanent resident/citizen, etc.
 ```
 
-## 5) Merging the résumé and cover letter into one PDF
+## 5) Merging the resume and cover letter into one PDF
 
-To merge the résumé and cover letter into one PDF, make sure that each
+To merge the resume and cover letter into one PDF, make sure that each
 `.Rmd` file exists in its own folder (as is the case when the project is
-first created). With the résumé and cover letter `.Rmd` files in their
+first created). With the resume and cover letter `.Rmd` files in their
 own folders, they can be merged by specifying the `knit` YAML variable
-in either the `résumé .Rmd` and/or the `cover_letter.Rmd` file(s) such
+in either the `resume.Rmd` and/or the `cover_letter.Rmd` file(s) such
 that
 
 ``` yaml
